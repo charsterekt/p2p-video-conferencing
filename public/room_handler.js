@@ -2,7 +2,7 @@ const socket = io("/");
 const videoGrid = document.getElementById("video-grid");
 const myPeer = new Peer(undefined, {
   secure: true,
-  host: "stella-meet.herokuapp.com/",
+  host: "stella-meet.herokuapp.com",
   port: "3001",
 });
 
