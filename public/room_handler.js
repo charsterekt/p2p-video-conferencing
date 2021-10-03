@@ -2,7 +2,8 @@ const socket = io("/");
 const videoGrid = document.getElementById("video-grid");
 const myPeer = new Peer(undefined, {
   secure: true,
-  port: "433",
+  host: "ivory-sparrow-44zptfz8.ws-us18.gitpod.io"
+  port: "9000",
 });
 
 let myVideoStream;
