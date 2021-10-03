@@ -1,7 +1,8 @@
 const socket = io("/");
 const videoGrid = document.getElementById("video-grid");
 const myPeer = new Peer(undefined, {
-  host: "https://azure-mandrill-kp25txyo.ws-us18.gitpod.io/",
+  secure: true,
+  host: "https://stella-meet.herokuapp.com/",
   port: "3001",
 });
 
