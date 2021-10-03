@@ -1,7 +1,7 @@
 const socket = io("/");
 const videoGrid = document.getElementById("video-grid");
 const myPeer = new Peer(undefined, {
-  host: "/",
+  host: "https://azure-mandrill-kp25txyo.ws-us18.gitpod.io/",
   port: "3001",
 });
 
