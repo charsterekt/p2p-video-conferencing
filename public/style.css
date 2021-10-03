@@ -1,0 +1,376 @@
+html {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+@font-face {
+  font-family: "Space";
+  src: url("fonts/space.ttf");
+}
+
+.earthdiv {
+  position: absolute;
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+}
+
+.earth {
+  height: 100%;
+  width: 100%;
+}
+
+.notearth {
+  position: absolute;
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+}
+
+/* Flickering animation */
+@keyframes flicker {
+  0%,
+  18%,
+  22%,
+  25%,
+  53%,
+  57%,
+  100% {
+    text-shadow: 0 0 4px #fff, 0 0 11px #fff, 0 0 40px rgb(58, 8, 92),
+      0 0 80px rgb(58, 8, 92), 0 0 90px rgb(58, 8, 92), 0 0 100px rgb(58, 8, 92),
+      0 0 150px rgb(58, 8, 92);
+  }
+
+  20%,
+  24%,
+  55% {
+    text-shadow: none;
+  }
+}
+
+.header {
+  margin-left: 100px;
+}
+
+.logo {
+  font-size: 7rem;
+  color: #fff;
+  font-family: "Space";
+  text-shadow: 0 0 7px #fff, 0 0 42px rgb(58, 8, 92), 0 0 82px rgb(58, 8, 92),
+    0 0 92px rgb(58, 8, 92);
+  margin-top: 120px;
+}
+
+.slogan {
+  font-size: 1.2rem;
+  color: #fff;
+  font-family: "Space";
+  text-shadow: 0 0 7px #fff, 0 0 42px rgb(58, 8, 92), 0 0 82px rgb(58, 8, 92),
+    0 0 92px rgb(58, 8, 92);
+}
+
+.flicker {
+  animation: flicker 1.5s infinite alternate;
+}
+
+.fields {
+  display: flex;
+  flex-direction: column;
+}
+
+.username {
+  height: 40px;
+  width: 400px;
+  font-family: "Space";
+  border-radius: 40px;
+  user-select: none;
+  text-decoration: none;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border: none;
+  outline: none;
+  color: #fff;
+  padding-left: 30px;
+  margin-left: 150px;
+  margin-top: 100px;
+}
+
+.username::placeholder {
+  color: lightgray;
+}
+
+.btnwrapper {
+  display: flex;
+  margin-top: 100px;
+}
+
+.broadcast,
+.watch {
+  height: 200px;
+  width: 200px;
+  background: transparent;
+  outline: none;
+  cursor: pointer;
+  border: none;
+  user-select: none;
+}
+
+.satellite,
+.astronaut {
+  height: 200px;
+  width: 200px;
+}
+
+.broadcast:hover,
+.watch:hover {
+  transform: scale(1.1) rotate(10deg);
+  transition: all 0.2s ease-in-out;
+}
+
+.broadcasttext,
+.watchtext {
+  color: #fff;
+  font-family: "Space";
+  text-align: center;
+}
+
+.btna {
+  margin-left: 140px;
+  margin-right: 60px;
+}
+
+.broadcasttext {
+  margin-left: 10px;
+  margin-top: 40px;
+}
+
+.watchtext {
+  margin-left: 35px;
+  margin-top: 40px;
+}
+
+/* PRELOADER */
+
+/*moon movement*/
+
+@-webkit-keyframes moonMovement {
+  0% {
+    bottom: 24%;
+    left: 14%;
+    z-index: 1;
+  }
+  3% {
+    bottom: 27%;
+    left: 17%;
+  }
+  25% {
+    -webkit-transform: scale(0.2);
+  }
+  47% {
+    bottom: 59%;
+    left: 69%;
+  }
+  49% {
+    z-index: 1;
+    -webkit-transform: scale(1);
+  }
+  50% {
+    bottom: 62%;
+    left: 72%;
+    z-index: 10;
+    box-shadow: -25px 25px 0 2px rgba(0, 0, 0, 0.5);
+  }
+  57% {
+    bottom: 59%;
+    left: 69%;
+  }
+  75% {
+    -webkit-transform: scale(2.2);
+    box-shadow: 0px 0px 0 4px rgba(0, 0, 0, 0.8);
+  }
+  97% {
+    bottom: 27%;
+    left: 17%;
+    box-shadow: 15px -15px 0 2px rgba(0, 0, 0, 0);
+  }
+  99% {
+    z-index: 10;
+  }
+  100% {
+    bottom: 24%;
+    left: 14%;
+    z-index: 1;
+    -webkit-transform: scale(1);
+    box-shadow: 15px -15px 0 2px rgba(0, 0, 0, 0);
+  }
+}
+
+@keyframes moonMovement {
+  0% {
+    bottom: 24%;
+    left: 14%;
+    z-index: 1;
+  }
+  3% {
+    bottom: 27%;
+    left: 17%;
+  }
+  25% {
+    -webkit-transform: scale(0.2);
+  }
+  47% {
+    bottom: 59%;
+    left: 69%;
+  }
+  49% {
+    z-index: 1;
+    -webkit-transform: scale(1);
+  }
+  50% {
+    bottom: 62%;
+    left: 72%;
+    z-index: 10;
+    box-shadow: -25px 25px 0 2px rgba(0, 0, 0, 0.5);
+  }
+  57% {
+    bottom: 59%;
+    left: 69%;
+  }
+  75% {
+    -webkit-transform: scale(2.2);
+    box-shadow: 0px 0px 0 4px rgba(0, 0, 0, 0.8);
+  }
+  97% {
+    bottom: 27%;
+    left: 17%;
+    box-shadow: 15px -15px 0 2px rgba(0, 0, 0, 0);
+  }
+  99% {
+    z-index: 10;
+  }
+  100% {
+    bottom: 24%;
+    left: 14%;
+    z-index: 1;
+    -webkit-transform: scale(1);
+    box-shadow: 15px -15px 0 2px rgba(0, 0, 0, 0);
+  }
+}
+
+body {
+  background-color: #000;
+}
+
+.wrapper {
+  width: 250px;
+  height: 250px;
+  /*border: 1px solid red;*/
+  margin: 0 auto;
+  margin-top: 10%;
+  position: relative;
+}
+
+.planet {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: #2574a9;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  box-shadow: -20px 20px 0 0px rgba(0, 0, 0, 0.7);
+  transform: translate(-50%, -50%);
+  z-index: 5;
+  overflow: hidden;
+}
+
+.planet::before {
+  content: "";
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  position: absolute;
+  left: 10%;
+  bottom: 10%;
+  background-color: #1a8bc3;
+}
+
+.planet::after {
+  content: "";
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  position: absolute;
+  left: 15%;
+  bottom: 15%;
+  background-color: #3498db;
+}
+
+.moon {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #95a5a6;
+  position: absolute;
+  left: 40%;
+  bottom: 30%;
+  overflow: hidden;
+  -webkit-animation: moonMovement 1.9s linear infinite;
+  animation: moonMovement 1.9s linear infinite;
+}
+
+.moon::before {
+  content: "";
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  position: absolute;
+  left: 10%;
+  bottom: 10%;
+  background-color: #d2d7d3;
+}
+
+.loader {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.wrapper {
+    width:250px;
+	height:250px;
+    position: absolute;
+    margin: 0;
+}
+
+.loading {
+    font-size: 2rem;
+    color: #fff;
+    font-weight: bold;
+    font-family: Helvetica, Arial, sans-serif;
+    margin-left: 10px;
+    margin-top: 200px;
+    position: absolute;
+}
+
+.everything {
+    display: none;
+}
