@@ -1,1 +1,1 @@
-web: npm start && peerjs --port 433
+web: npm start
