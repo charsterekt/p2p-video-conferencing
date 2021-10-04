@@ -1,7 +1,7 @@
 const socket = io("/");
 const videoGrid = document.getElementById("video-grid");
 const myPeer = new Peer(undefined, {
-  host: "/",
+  host: "stella-meet.herokuapp.com/",
   port: "3000",
   path: "/peerjs",
 });
