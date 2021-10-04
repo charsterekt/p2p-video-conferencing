@@ -3,7 +3,7 @@ const videoGrid = document.getElementById("video-grid");
 const myPeer = new Peer(undefined, {
   secure: true,
   host: "stella-meet.herokuapp.com",
-  port: "3000",
+  port: "9000",
   path: "/peerjs",
 });
 
