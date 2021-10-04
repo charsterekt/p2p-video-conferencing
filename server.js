@@ -3,11 +3,10 @@ const app = express();
 const server = require('http').createServer(app);
 const io = require('socket.io')(server);
 const {v4: uuidV4} = require('uuid');
-const ExpressPeerServer = require('peer').ExpressPeerServer;
+
 
 app.set('view engine', 'ejs');
 app.use("/public", express.static('./public/'));
-app.use("/peerjs", ExpressPeerServer(server));
 
 app.get('/', (req, res) => {
   res.render('index.ejs');
