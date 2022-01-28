@@ -1,5 +1,5 @@
-import * as THREE from 'https://cdn.skypack.dev/three';
-import {GLTFLoader} from 'https://cdn.skypack.dev/three/examples/jsm/loaders/GLTFLoader';
+import * as THREE from 'https://cdn.skypack.dev/three@0.129.0/build/three.module.js';
+import {GLTFLoader} from 'https://cdn.skypack.dev/three@0.129.0/examples/jsm/loaders/GLTFLoader.js';
 import atmosphereVertexShader from './shaders/atmosphereVertex_glsl.js';
 import atmosphereFragmentShader from './shaders/atmosphereFragment_glsl.js';
 
